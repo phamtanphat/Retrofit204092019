@@ -32,19 +32,19 @@ public class MainActivity extends AppCompatActivity {
 //        ApiResponse apiResponse = retrofit.create(ApiResponse.class);
 //
 //        // Buoc 3 : Goi api va nhan du lieu tu trong call back
-//        Call<Demo1> callbackDemo1 = apiResponse.getDemo1();
-//        callbackDemo1.enqueue(new Callback<Demo1>() {
-//            @Override
-//            public void onResponse(Call<Demo1> call, Response<Demo1> response) {
-//                Demo1 demo1 = response.body();
-//                Log.d("BBB",demo1.getMonhoc());
-//            }
-//
-//            @Override
-//            public void onFailure(Call<Demo1> call, Throwable t) {
-//
-//            }
-//        });
+        Call<Demo1> callbackDemo1 = RetrofitInit.getInStance().getDemo1();
+        callbackDemo1.enqueue(new Callback<Demo1>() {
+            @Override
+            public void onResponse(Call<Demo1> call, Response<Demo1> response) {
+                Demo1 demo1 = response.body();
+                Log.d("BBB",demo1.getMonhoc());
+            }
+
+            @Override
+            public void onFailure(Call<Demo1> call, Throwable t) {
+
+            }
+        });
 
     }
 }
