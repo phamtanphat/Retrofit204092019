@@ -8,8 +8,8 @@ public interface ApiResponse {
 
 //    https://news.zing.vn/thoi-su.html
 
-    @GET("thoi-su.html")
-    Call<String> getHtmlThoisu();
+    @GET("demo1.json")
+    Call<Demo1> getDemo1();
 
 
 }
